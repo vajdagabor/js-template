@@ -1,0 +1,51 @@
+{
+  "name": "",
+  "version": "0.1.0",
+  "description": "A Mad Sciene project",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "build": "babel src -d lib --source-maps",
+    "declaration:build": "tsc -p tsconfig.declaration.json",
+    "dev": "npm run build -- --watch",
+    "test": "jest",
+    "test-watch": "npm run test -- --watch",
+    "prepare": "npm run build && npm run declaration:build"
+  },
+  "keywords": [],
+  "author": "Gabor Vajda <gabor@madscience.design>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vajdagabor/{projectName}.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vajdagabor/{projectName}/issues"
+  },
+  "homepage": "https://github.com/vajdagabor/{projectName}#readme",
+  "babel": {
+    "presets": [
+      "minify",
+      "@babel/preset-env"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@types/jest": "^24.9.0",
+    "acorn": "^7.1.0",
+    "babel-eslint": "^10.0.3",
+    "babel-preset-minify": "^0.5.1",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {}
+}
