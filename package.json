@@ -8,7 +8,7 @@
     "/dist"
   ],
   "scripts": {
-    "build": "babel src -d lib --source-maps",
+    "build": "babel src -d dist --source-maps",
     "declaration:build": "tsc -p tsconfig.declaration.json",
     "dev": "npm run build -- --watch",
     "test": "jest",
